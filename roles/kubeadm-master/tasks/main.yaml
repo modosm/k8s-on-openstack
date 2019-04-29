@@ -25,7 +25,13 @@
 - name: Configure kube-controller-manager cloud provider integration Step1
   blockinfile:
     insertbefore: 'image: '
-    block: "    - --cloud-provider=external\n    - --cluster-cidr=10.96.0.0/16\n    - --allocate-node-cidrs=true\n    - --external-cloud-volume-plugin=openstack\n    - --cloud-config=/etc/kubernetes/cloud-config"
+    block: """
+        - --cloud-provider=external
+        - --cluster-cidr=10.96.0.0/16
+        - --allocate-node-cidrs=true
+        - --external-cloud-volume-plugin=openstack
+        - --cloud-config=/etc/kubernetes/cloud-config
+    """
     path: /etc/kubernetes/manifests/kube-controller-manager.yaml
     marker: "# {mark} ANSIBLE MANAGED BLOCK CLOUDPROVIDER"
 
@@ -146,4 +152,3 @@
     src: /opt/kubectx/kubens
     dest: /usr/local/bin/kubens
   when: kubectx.stat.exists == False
-
