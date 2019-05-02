@@ -84,14 +84,6 @@ The following environment variables needs to be defined:
   * `OS_USERNAME`
   * `OS_DOMAIN_NAME`
 
-Authors
-------
-
-  * François Deppierraz <francois.deppierraz@infraly.ch>
-  * Oli Schacher <oli.schacher@switch.ch>
-  * Saverio Proto <saverio.proto@switch.ch>
-  * @HaseHarald
-
 References
 ----------
 
