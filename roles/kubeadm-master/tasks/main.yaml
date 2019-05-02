@@ -49,7 +49,7 @@
     path: /etc/kubernetes/manifests/kube-controller-manager.yaml
     marker: "# {mark} ANSIBLE MANAGED BLOCK HOSTPATH"
 
-- name: Upload webook kubeconfig file
+- name: Upload webhook kubeconfig file
   copy:
     dest: /etc/kubernetes/pki/webhook.kubeconfig.yaml
     src: files/webhook.kubeconfig.yaml
