@@ -10,7 +10,7 @@
   delegate_to: localhost
   os_auth:
 
-- name: Upload webook kubeconfig file
+- name: Upload webhook kubeconfig file
   template:
     dest: /home/ubuntu/manifests/k8s-keystone-auth.yaml
     src: "{{ role_path }}/templates/k8s-keystone-auth.yaml.j2"
