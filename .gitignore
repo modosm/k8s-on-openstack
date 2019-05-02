@@ -1,3 +1,5 @@
 
 site.retry
 *.retry
+kube_templates/.DS_Store
+.DS_Store
